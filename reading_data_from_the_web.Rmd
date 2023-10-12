@@ -68,3 +68,17 @@ swm_df =
     runtime = runtime_vec)
 ```
 
+Learning Assessment
+```{r}
+url = "http://books.toscrape.com"
+
+books_html = read_html(url)
+
+books_titles = 
+  books_html |>
+  html_elements("h3 a") |>
+  html_text()
+
+books_titles
+```
+
